@@ -66,4 +66,15 @@ Omrails::Application.configure do
   # config.active_record.auto_explain_threshold_in_seconds = 0.5
 
   config.action_mailer.default_url_options = { :host => 'localhost:3000' }
+
+  # Paperclip should user Amazon S3 on Heroku
+  # config/environments/production.rb
+config.paperclip_defaults = {
+  :storage => :s3,
+  :s3_credentials => {
+    :bucket => ENV['Test_Rails'],
+    :access_key_id => ENV['AKIAID3BOJZRRA7AOLMQ'],
+    :secret_access_key => ENV['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']
+  }
+}
 end
