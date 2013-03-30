@@ -1,14 +1,17 @@
 <% if user_signed_in? %>
 
 <h1>You are signed in</h1>
+	<p>
+	<%= link_to "Add New Pin", new_pin_path, class: "btn btn-primary" %>
+	</p>
+
 
 <% else %>
 
 <div class="hero-unit">
-	<h1>Welcome to One Month Rails</h1>
+	<h1>Welcome to Dan's Test Rails Project</h1>
 		<p>
-		You've found the home page for the 
-		<%= link_to "OneMonth Rails", "http://onemonthrails.com" %> application.
+		This project is kind of like Pinterest. You can sign up and pin pictures.
 		</p>
 		<p>
 		<%= link_to "Sign Up Now", new_user_registration_path, class: "btn btn-primary btn-large" %>
