@@ -71,9 +71,9 @@ Omrails::Application.configure do
   config.paperclip_defaults = {
     :storage => :s3,
     :s3_credentials => {
-      :bucket => "Rails2"
-      :access_key_id => "AKIAJRUVVFDFSUAC25RQ"
-      :secret_access_key => "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"
+      :bucket => ENV['AWS_BUCKET'],
+      :access_key_id => ENV['AWS_ACCESS_KEY_ID'],
+      :secret_access_key => ENV['AWS_SECRET_ACCESS_KEY']
     }
   }
 end
