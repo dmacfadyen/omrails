@@ -71,9 +71,9 @@ Omrails::Application.configure do
   config.paperclip_defaults = {
     :storage => :s3,
     :s3_credentials => {
-      :bucket => ENV['Test_Rails'],
-      :access_key_id => ENV['AKIAID3BOJZRRA7AOLMQ'],
-      :secret_access_key => ENV['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']
+      :bucket => ENV['Rails2'],
+      :access_key_id => ENV['AKIAJRUVVFDFSUAC25RQ'],
+      :secret_access_key => ENV['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']
     }
 }
 end
