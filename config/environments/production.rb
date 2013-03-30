@@ -67,13 +67,13 @@ Omrails::Application.configure do
 
   config.action_mailer.default_url_options = { :host => 'localhost:3000' }
 
-  # Paperclip should user Amazon S3 on Heroku
+  # Paperclip should use Amazon S3 on Heroku
   config.paperclip_defaults = {
     :storage => :s3,
     :s3_credentials => {
-      :bucket => ENV['Rails2'],
-      :access_key_id => ENV['AKIAJRUVVFDFSUAC25RQ'],
-      :secret_access_key => ENV['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']
+      :bucket => ENV['AWS_BUCKET'],
+      :access_key_id => ENV['AWS_ACCESS_KEY_ID'],
+      :secret_access_key => ENV['AWS_SECRET_ACCESS_KEY']
     }
-}
+  }
 end
